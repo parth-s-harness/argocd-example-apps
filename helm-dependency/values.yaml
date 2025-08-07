@@ -1,10 +1,9 @@
 wordpress:
-  image:
-#    tag: invalid #break this app on purpose until a dedicated broken app is created
-    tag: latest 
-  wordpressPassword: foo
   mariadb:
-    db:
-      password: bar
     rootUser:
-      password: baz
+      password: "baz"
+    db:
+      password: "bar"
+  image:
+    tag: "latest"
+  wordpressPassword: "foo"
