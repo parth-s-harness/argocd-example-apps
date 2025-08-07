@@ -1,6 +1,7 @@
 wordpress:
   image:
-    tag: invalid #break this app on purpose until a dedicated broken app is created
+#    tag: invalid #break this app on purpose until a dedicated broken app is created
+    tag: latest 
   wordpressPassword: foo
   mariadb:
     db:
