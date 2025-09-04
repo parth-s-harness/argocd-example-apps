@@ -18,3 +18,7 @@ spec:
           name: guestbook-ui
           ports:
             - containerPort: 80
+        - image: nginx:stable-alpine3.21-perl
+          name: nginx-check
+          ports:
+            - containerPort: 80
