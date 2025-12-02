@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: guestbook-ui
 spec:
-  replicas: 1
+  replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -14,11 +14,11 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-        - image: gcr.io/google-samples/gb-frontend:v5
+        - image: gcr.io/google-samples/gb-frontend:latest
           name: guestbook-ui
           ports:
             - containerPort: 80
-        - image: nginx:stable-alpine3.21-perl
+        - image: nginx:latest
           name: nginx-check
           ports:
             - containerPort: 80
