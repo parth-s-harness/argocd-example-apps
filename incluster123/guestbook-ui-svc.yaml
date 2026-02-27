@@ -1,0 +1,5 @@
+sdf: sdf
+metadata:
+  name: new2-guestbook-ui
+testkey1:
+  key2: val1
