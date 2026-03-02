@@ -4,7 +4,7 @@ import string
 
 # --- CONFIGURATION ---
 FOLDER_NAME = "real_world_stress_data"
-NUM_FILES = 10  # Change this to your desired N
+NUM_FILES = 100 # Change this to your desired N
 TARGET_SIZE_MB = 9.9
 # ---------------------
 
