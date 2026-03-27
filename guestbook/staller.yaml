@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: sync-staller-
+  annotations:
+    argocd.argoproj.io/hook: PreSync # This tells Argo to run this first
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+      - name: sleep
+        image: alpine
+        command: ["/bin/sh", "-c", "sleep 300"] # Stalls the sync for 5 minutes
+      restartPolicy: Never
+  backoffLimit: 0
